@@ -62,10 +62,9 @@ class App extends React.Component {
   
   clearTasks = () =>{
     this.setState({
-      ...this,
-      tasks: ({})
+      tasks: [{}]
     })
-
+    console.log('working')
   }
 
 
@@ -82,6 +81,7 @@ class App extends React.Component {
         <TodoList
 
           toggleTask={this.toggleTask}
+          clearTasks={this.clearTasks}
           tasks={this.state.tasks}
         />
       </div>

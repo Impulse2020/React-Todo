@@ -31,6 +31,10 @@ class App extends React.Component {
 
   addTask = (taskName) => {
    // e.preventDefault();
+   if(taskName === ""){
+     console.log('error cant be empty');
+   }
+   else{
     const newTask = {
       task: taskName,
       id: new Date(),
@@ -41,6 +45,7 @@ class App extends React.Component {
     this.setState({
       tasks: [...this.state.tasks, newTask]
     });
+  }
   };
   toggleTask = taskId => {
     

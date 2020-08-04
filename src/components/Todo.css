@@ -3,11 +3,37 @@ body{
     justify-content: center;
     text-align:center;
     background-color: bisque;
+    border:25px royalblue inset;
+    width:auto;
+    height: auto;
+}
+h1{
+    -webkit-text-stroke:1px red;
+    color:gold;
+}
+button{
+    background-color: red;
+    border:2px gold solid;
+    margin: 2.5%;
+    padding:1%;
+    font-size:1.5rem;
+    color:white;
+}
+button:hover{
+ box-shadow: 5px 6px yellow;
+}
+button:active{
+border:0px white ;
+box-shadow:3px 4px orange;
+}
+input{
+    border:4px gold inset ;
 }
 .Task{
     align-self: center;
     background-color: antiquewhite;
     padding:2.5%;
+    margin:3%;
 }
 
 .Taskiscomplete{ 

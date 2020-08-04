@@ -7,9 +7,11 @@ body{
 .Task{
     align-self: center;
     background-color: antiquewhite;
+    padding:2.5%;
 }
 
 .Taskiscomplete{ 
     text-decoration: line-through;
     background-color: white;
+    padding:2%;
 }

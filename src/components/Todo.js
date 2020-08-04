@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Task = props =>{
-    {console.log(props.task)}
+    
     return(
         <div 
         onClick = {() => props.toggleTask(props.task.id)}

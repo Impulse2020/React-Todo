@@ -5,16 +5,16 @@ import TodoList from './components/TodoList';
 let tasks = [{
   task: 'Do the thing',
   id: '11',
-  completed: false
+  iscomplete: false
 },{
   task: 'Do the next thing',
   id: '12',
-  completed: false
+  iscomplete: false
 },  
 {
   task: 'Do the other thing',
   id: '31',
-  completed: false
+  iscomplete: false
 },];
 
 class App extends React.Component {
@@ -43,7 +43,7 @@ class App extends React.Component {
     });
   };
   toggleTask = taskId => {
-    console.log(taskId);
+    
     // map over array
     // when we find the item we clicked, toggle the purchased field
     // otherwise return the item untouched
@@ -64,9 +64,15 @@ class App extends React.Component {
     this.setState({
       tasks: [{}]
     })
-    console.log('working')
+    
   }
-
+  clearComplete = () =>{
+    this.setState({
+      ...tasks,
+      tasks:this.state.tasks.filter(task => task.iscomplete == false)
+    })
+   
+  }
 
 
   render() {
@@ -82,6 +88,7 @@ class App extends React.Component {
 
           toggleTask={this.toggleTask}
           clearTasks={this.clearTasks}
+          clearComplete={this.clearComplete}
           tasks={this.state.tasks}
         />
       </div>
